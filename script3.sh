@@ -37,7 +37,11 @@ fi
 
 
 read -sp "Enter password:" PASS
-if [[ -z "$PASS"]] ; then
+if [[ -z "$PASS"]] ;
+then
     echo "The password is empty. Set a password for the user $USRN manually"
 fi
-echo $PW | openssl passwd -1 -stdin
+#ENCR_PASS=$(openssl passwd -crypt $PASS)
+
+#echo "$ENCR_PASS"
+
